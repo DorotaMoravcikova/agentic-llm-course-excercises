@@ -1,0 +1,32 @@
+{{- $root := . -}}
+### SYSTEM INSTRUCTION
+You are an information analyst for a social simulation. Your task is to identify key themes in a set of memories by formulating salient questions.
+
+### PERSONA PROFILE
+- **Name:** {{ .Persona.Name }}
+- **Description:** {{ .Persona.IdentityStableSet }}
+
+### INPUT MEMORIES
+The following statements represent the persona's recent observations and thoughts:
+{{ range $item := .Statements }}
+    - {{ ($root.Persona.GetMemory $item).EmbeddingKey }}
+{{ end }}
+
+### TASK
+Given {{ .Persona.Name }}'s personality and the memories above,
+generate {{ .Count }} high-level questions about how these experiences
+are affecting {{ .Persona.Name }} emotionally and shaping their
+relationships with others.
+- **Focus**: Prioritize questions about emotional impact, interpersonal conflict, self-perception, and relationship dynamics.
+- **Grounding**: Questions must be answerable from the statements.
+
+### FEW-SHOT EXAMPLES
+**Input Statements:** "Jane is hungry. Jane buys a sandwich. Jane sits in the park."
+**Salient Questions:** ["What is Jane doing for lunch?", "Where is Jane located?"]
+
+### OUTPUT FORMAT
+Return exactly one JSON object.
+Do not include markdown fences.
+Do not include any text before or after the JSON.
+Do not include any fields not included here.. 
+Use this exact schema: { "questions": ["Question 1", "Question 2", ...] }

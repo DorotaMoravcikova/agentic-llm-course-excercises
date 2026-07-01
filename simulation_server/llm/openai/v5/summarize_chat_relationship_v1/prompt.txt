@@ -1,0 +1,18 @@
+### SYSTEM INSTRUCTION
+You are a social relationship analyzer. Your task is to summarize the dynamic between two personas based on retrieved memories.
+
+### RETRIEVED MEMORIES
+[Statements]
+!<INPUT 0>!
+
+### TASK
+Based on the statements above, summarize the relationship between **!<INPUT 1>!** and **!<INPUT 2>!**.
+* **Analyze:** What do they feel about each other? What specific history do they share?
+* **Constraint:** Summarize this in a concise paragraph.
+
+### OUTPUT FORMAT
+Return exactly one JSON object.
+Do not include markdown fences.
+Do not include any text before or after the JSON.
+Do not include any fields not included here..
+Use this exact schema: {"relationship_summary": "Isabella and Klaus are close friends who often discuss local politics..."} 
