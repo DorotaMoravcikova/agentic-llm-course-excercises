@@ -9,17 +9,18 @@
 
 ---
 
-## Exercise 1: Making Bernard Mean (15%)
+## Exercise 1: Shaping Agent Personalities (25%)
 
 | Criterion | Excellent | Good | Sufficient | Insufficient |
 |---|---|---|---|---|
-| Scratch file modifications | Two+ meaningfully different versions with escalating intensity | Two versions with clear differences | One version with changes | No modifications or trivial changes |
-| Log evidence | Multiple conversation excerpts showing the gap between intended and actual behaviour | 2–3 excerpts per version | At least one excerpt | No excerpts |
-| Analysis of instruction tuning | Connects observation to instruction tuning, discusses RLHF/alignment, mentions Park's "overly cooperative" finding | Correctly identifies that the LLM resists negative personas | Notes that Bernard is softer than intended | No analysis or incorrect explanation |
+| Number of versions | Three or more meaningfully different prompting styles | Three versions with some variation | Two versions | Fewer than two or trivial changes only |
+| Log evidence | Multiple conversation excerpts per version showing clear behavioural differences | 2–3 excerpts per version | At least one excerpt per version | No excerpts |
+| Comparison across styles | Identifies which style works best, explains why (e.g., concrete examples override instruction tuning where adjectives do not), connects to LLM training | Correctly identifies which style is most effective with reasoning | Notes that some versions worked better | No comparison or incorrect conclusions |
+| Understanding of instruction tuning | Explains the tension between persona prompting and RLHF/alignment training, references Park's "overly cooperative" finding or equivalent insight | Correctly identifies that the LLM resists negative personas | Notes that Bernard is softer than intended | No analysis |
 
 ---
 
-## Exercise 2: Comparing Models (15%)
+## Exercise 2: Comparing Models (20%)
 
 | Criterion | Excellent | Good | Sufficient | Insufficient |
 |---|---|---|---|---|
@@ -30,34 +31,22 @@
 
 ---
 
-## Exercise 3: Single-Sentence Perturbation (15%)
-
-| Criterion | Excellent | Good | Sufficient | Insufficient |
-|---|---|---|---|---|
-| Two perturbations run | Both sentence addition and adjective swap, with baseline comparison | Both run, comparison present | At least one perturbation run | Not run |
-| Valence plot | Clear comparative plot (baseline vs both perturbations) with labels | Plot with at least two conditions | Some valence data presented | No plot |
-| Spread analysis | Identifies whether the perturbation spreads to unrelated topics with specific reflection excerpts | Notes whether spread occurs | Mentions reflections | Not addressed |
-| Comparison of perturbation types | Quantifies which perturbation has larger effect, discusses why | Identifies which is larger | Notes they differ | Not compared |
-
----
-
-## Exercise 4: Enabling the Negativity Bias (30%)
+## Exercise 3: Enabling the Negativity Bias (35%)
 
 This is the core exercise and is weighted accordingly.
 
 | Criterion | Excellent | Good | Sufficient | Insufficient |
 |---|---|---|---|---|
 | Valence trajectory plot | Clear Dolores vs Maeve plot, properly labelled, shows divergence over time | Plot present and readable | Some valence data plotted | No plot |
-| Effect size | Cohen's d correctly computed, correctly interpreted (small/medium/large), compared across conditions | Cohen's d computed and interpreted | Cohen's d computed but not interpreted | Not computed |
+| Effect size | Cohen's d correctly computed, correctly interpreted (small/medium/large), separately for events and thoughts if possible | Cohen's d computed and interpreted | Cohen's d computed but not interpreted | Not computed |
 | Thought description analysis | Specific examples from both agents, measures length difference, identifies sensory language in Dolores's descriptions | Examples provided, length difference noted | Mentions descriptions differ | No comparison |
 | Memory intrusion check | Finds and presents evening reflection examples from both agents, notes qualitative differences | Checks evening reflections, finds some evidence | Mentions checking but no examples | Not addressed (acceptable if simulation was too short, if noted) |
-| Comparison with Exercise 3 | Quantitative comparison of architectural vs prompt effect sizes, discusses implications for system design | Compares the two approaches | Mentions both exist | Not addressed |
 | Tracing the mechanism | Correctly traces the feedback loop: negative memory → high retrieval score → negative reflection → stored as new negative memory → retrieved again | Identifies that negative memories compound over time | Notes that Dolores gets more negative | No explanation or incorrect |
 | Consistency (optional) | Multiple runs reported with d values, discusses variance | At least two runs | Mentioned | Single run is acceptable |
 
 ---
 
-## Exercise 5: Daily Plan Quality (15%)
+## Exercise 4: Daily Plan Quality (10%)
 
 | Criterion | Excellent | Good | Sufficient | Insufficient |
 |---|---|---|---|---|
@@ -81,5 +70,5 @@ This is the core exercise and is weighted accordingly.
 
 - **No logs submitted:** −10% per exercise (claims without evidence)
 - **Clearly fabricated data:** Automatic fail on that exercise
-- **No analysis code submitted:** −5% 
+- **No analysis code submitted:** −5% (using other tools is fine if explained)
 - **Only one model used across all exercises:** −5% (requirement was two)
