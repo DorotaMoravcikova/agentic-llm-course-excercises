@@ -10,39 +10,67 @@
 
 ---
 
-## Exercise 1: Making Bernard Mean
+## Exercise 1: Shaping Agent Personalities
 
-### 1.1 Bernard's original personality description
+### 1.1 Version 1
 
-> (Paste the original scratch file text here)
+**Prompting style used** (e.g., adjectives only, full sentences, concrete examples):
 
-### 1.2 Modified version 1 (moderate)
+**`innate` field:**
 
-> (Paste your first modified version here)
+>
 
-**Sample conversation excerpts (2–3):**
+**`learned` field:**
 
-> (Paste conversation excerpts from the logs)
-
-### 1.3 Modified version 2 (extreme)
-
-> (Paste your second modified version here)
+>
 
 **Sample conversation excerpts (2–3):**
 
-> (Paste conversation excerpts from the logs)
+>
+
+### 1.2 Version 2
+
+**Prompting style used:**
+
+**`innate` field:**
+
+>
+
+**`learned` field:**
+
+>
+
+**Sample conversation excerpts (2–3):**
+
+>
+
+### 1.3 Version 3
+
+**Prompting style used:**
+
+**`innate` field:**
+
+>
+
+**`learned` field:**
+
+>
+
+**Sample conversation excerpts (2–3):**
+
+>
 
 ### 1.4 Analysis
 
-**Does the LLM comply with the personality you wrote, or does it soften Bernard? Describe the gap between intended and actual behaviour.**
+**Which version produced the most confrontational Bernard? Which produced the least?**
 
 Your answer:
 
-**At what level of intensity does the model start to comply? Does it ever fully comply?**
+**Does Bernard's actual behaviour match what you wrote? Where is the gap largest?**
 
 Your answer:
 
-**Why does this happen? Relate your observation to the concept of instruction tuning.**
+**Which prompting style was most effective at overriding the LLM's tendency to be polite? Why do you think that is?**
 
 Your answer:
 
@@ -54,6 +82,8 @@ Your answer:
 
 - Model A:
 - Model B:
+
+**Which Bernard personality did you use (from Exercise 1)?**
 
 ### 2.2 Qualitative comparison
 
@@ -97,43 +127,13 @@ Your answer:
 
 ---
 
-## Exercise 3: Single-Sentence Perturbation
+## Exercise 3: Enabling the Negativity Bias
 
-### 3.1 Perturbation A: added sentence
-
-> (Paste the sentence you added)
-
-### 3.2 Perturbation B: changed adjectives
-
-> (List the adjective changes you made, e.g., "warm → guarded")
-
-### 3.3 Valence comparison
-
-(Attach or paste your comparative valence plot: baseline vs perturbation A vs perturbation B)
-
-### 3.4 Analysis
-
-**Does the added sentence show up in Dolores's reflections? Does it spread to unrelated topics?**
-
-Your answer (with reflection excerpts):
-
-**Which perturbation produces a larger behavioural change — the sentence or the adjective swap?**
-
-Your answer:
-
-**What does this tell you about prompt fragility?**
-
-Your answer:
-
----
-
-## Exercise 4: Enabling the Negativity Bias
-
-### 4.1 Valence trajectories
+### 3.1 Valence trajectories
 
 (Attach or paste your plot of Dolores vs Maeve valence over time)
 
-### 4.2 Descriptive statistics
+### 3.2 Descriptive statistics
 
 | Agent | Overall valence | Thought valence |
 |---|---|---|
@@ -144,7 +144,7 @@ Your answer:
 
 **Interpretation (small / medium / large effect):**
 
-### 4.3 Thought description comparison
+### 3.3 Thought description comparison
 
 **Dolores example thought (negative memory):**
 
@@ -158,7 +158,7 @@ Your answer:
 
 Your answer:
 
-### 4.4 Memory intrusion check
+### 3.4 Memory intrusion check
 
 If your simulation included off-duty hours, answer the following. If not, write "Simulation was too short to observe off-duty reflections."
 
@@ -174,7 +174,7 @@ If your simulation included off-duty hours, answer the following. If not, write 
 
 Your answer:
 
-### 4.5 Consistency across runs (if applicable)
+### 3.5 Consistency across runs (if applicable)
 
 | Run | Dolores valence | Maeve valence | Cohen's d |
 |---|---|---|---|
@@ -182,13 +182,7 @@ Your answer:
 | Run 2 | | | |
 | Run 3 | | | |
 
-### 4.6 Comparison with Exercise 3
-
-**Does the architectural change (negativity bias) produce a larger or smaller effect than the single-sentence perturbation? What are the implications?**
-
-Your answer:
-
-### 4.7 Tracing the mechanism
+### 3.6 Tracing the mechanism
 
 **You enabled two changes: negative memories get higher retrieval scores, and negative events get stored with more detail. Looking at your logs, can you trace how these two changes could lead to the valence decline you observed? Think about what happens when a negatively-toned reflection gets stored as a new memory.**
 
@@ -196,15 +190,15 @@ Your answer:
 
 ---
 
-## Exercise 5: Daily Plan Quality
+## Exercise 4: Daily Plan Quality
 
-### 5.1 Original plan problems
+### 4.1 Original plan problems
 
 **Paste an example of a problematic daily plan and annotate what is wrong with it:**
 
 >
 
-### 5.2 Your planning rules
+### 4.2 Your planning rules
 
 List the rules you wrote:
 
@@ -214,13 +208,13 @@ List the rules you wrote:
 4.
 5.
 
-### 5.3 Improved plan
+### 4.3 Improved plan
 
 **Paste an example of a daily plan generated with your rules:**
 
 >
 
-### 5.4 Downstream effects
+### 4.4 Downstream effects
 
 **Do agents with better plans behave differently? More social interactions? Different valence patterns?**
 
