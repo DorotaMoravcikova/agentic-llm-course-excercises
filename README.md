@@ -1,13 +1,12 @@
 # Agentic LLM Course — Case Study 4: Simulating Societies with LLM Agents
 
+Course materials for Case Study 4 of the Agentic LLM course at LIACS, Leiden University.
+
 <p align="center">
   <img src="our_cover.png" alt="Good Agent Gone Bad" width="80%">
 </p>
 
-
-Course materials for Case Study 4 of the Agentic LLM course at LIACS, Leiden University.
-
-This case study accompanies the generative agents simulation at [DorotaMoravcikova/generative_agents](https://github.com/DorotaMoravcikova/generative_agents), based on the work described in *"Good Agent Gone Bad: When 'Bad is Stronger Than Good' in the Memory of Generative Agents"* (van der Veen, Moravčíková & van Duijn, 2026).
+This case study draws on the generative agents simulation at [fvdveen/generative_agents](https://github.com/fvdveen/generative_agents), based on the work described in *"Good Agent Gone Bad: When 'Bad is Stronger Than Good' in the Memory of Generative Agents"* (van der Veen, Moravčíková & van Duijn, 2026).
 
 ## Getting Started
 
